@@ -9,3 +9,10 @@
 方便调用者使用sentinel error的形式来捕获；
 
 代码见example_err_no_rows.go
+
+
+2. 基于 errgroup 实现一个 http server 的启动和关闭 ，以及 linux signal 信号的注册和处理，要保证能够一个退出，全部注销退出。
+
+模拟两种退出方式：ctrl+c 信号退出，某个gr报错退出；
+
+代码见 cmd/errgroup/main.go
